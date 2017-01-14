@@ -1,0 +1,525 @@
+{
+	"sensors": {
+		"00:17:88:01:10:3e:22:b3": "Office - Switch - 01",
+		"00:17:88:01:10:49:78:35": "Office - Switch - 02",
+		"00:17:88:01:10:49:58:d9": "Bedroom - Switch - 01",
+		"00:17:88:01:10:49:5a:0b": "Bedroom - Switch - 02",
+		"00:17:88:01:10:5e:2a:bb": "Hallway - Switch - 01",
+		"00:17:88:01:10:49:58:d5": "Hallway - Switch - 02",
+		"00:17:88:01:10:5f:b4:bc": "Living room - Switch - 01",
+		"00:17:88:01:10:49:76:7a": "Living room - Switch - 02",
+		"00:17:88:01:10:49:76:dd": "Kitchen - Switch - 01",
+		"00:17:88:01:10:5e:25:e9": "Kitchen - Switch - 02",
+		"00:17:88:01:10:5f:b3:6e": "Entrance - Switch - 01",
+		"00:17:88:01:10:5f:b7:4d": "Bathroom - Switch - 01",
+		"00:17:88:01:10:49:59:f7": "Living room - Switch - 03",
+		"00:17:88:01:10:3f:b3:6c": "Living room - Switch - 04",
+		"00:17:88:01:02:01:02:ff-02-0406": "Entrance - Motion - 01"
+	},
+	"lights": {
+		"00:17:88:01:02:0a:74:3b": "Office - Lamp - 01",
+		"00:17:88:01:02:05:b1:e4": "Bedroom - Lamp - 01",
+		"00:17:88:01:02:07:b7:78": "Hallway - Lamp - 01",
+		"00:17:88:01:10:28:a4:fb": "Hallway - Lamp - 02",
+		"00:17:88:01:02:77:cb:07": "Living room - Lamp - 01",
+		"84:18:26:00:00:09:81:b7": "Living room - Chandelier",
+		"00:17:88:01:10:28:ad:f8": "Kitchen - Lamp - 01",
+		"00:17:88:01:02:77:7e:61": "Entrance - Lamp - 01",
+		"00:17:88:01:10:28:a2:cd": "Bathroom - Lamp - 01",
+		"00:17:88:01:02:05:ab:31": "Bathroom - Lamp - 02",
+		"00:17:88:01:02:77:cb:07": "Living room - Lamp - 01",
+		"84:18:26:00:00:09:81:b7": "Living room - Chandelier",
+		"00:17:88:01:00:ca:27:5d": "Office - Lightstrip - 01",
+		"84:18:26:00:00:0a:94:36": "Office - UV - 01",
+		"00:17:88:01:01:20:8d:d2": "Living room - Lightstrip - Bed",
+		"00:17:88:01:01:20:8d:d4": "Living room - Lightstrip - Amb"
+	},
+	"links": {
+		"00:17:88:01:10:3e:22:b3": {
+			"00:17:88:01:02:0a:74:3b": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"84:18:26:00:00:0a:94:36": ["switch-up2-simple", "switch-down2-simple"]
+		},
+		"00:17:88:01:10:49:78:35": {
+			"00:17:88:01:02:0a:74:3b": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"84:18:26:00:00:0a:94:36": ["switch-up2-simple", "switch-down2-simple"]
+		},
+		"00:17:88:01:10:49:58:d9": {
+			"00:17:88:01:02:05:b1:e4": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+		},
+		"00:17:88:01:10:49:5a:0b": {
+			"00:17:88:01:02:05:b1:e4": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+		},
+		"00:17:88:01:10:5e:2a:bb": {
+			"00:17:88:01:02:07:b7:78": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"00:17:88:01:10:28:a4:fb": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+		},
+		"00:17:88:01:10:49:58:d5": {
+			"00:17:88:01:02:07:b7:78": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"00:17:88:01:10:28:a4:fb": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+		},
+		"00:17:88:01:10:5f:b4:bc": {
+			"00:17:88:01:02:77:cb:07": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"84:18:26:00:00:09:81:b7": ["switch-up2-simple", "switch-down2-simple"]
+		},
+		"00:17:88:01:10:49:76:7a": {
+			"00:17:88:01:02:77:cb:07": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"84:18:26:00:00:09:81:b7": ["switch-up2-simple", "switch-down2-simple"]
+		},
+		"00:17:88:01:10:49:76:dd": {
+			"00:17:88:01:10:28:ad:f8": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+		},
+		"00:17:88:01:10:5e:25:e9": {
+			"00:17:88:01:10:28:ad:f8": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+		},
+		"00:17:88:01:10:5f:b3:6e": {
+			"00:17:88:01:02:77:7e:61": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+		},
+		"00:17:88:01:10:5f:b7:4d": {
+			"00:17:88:01:10:28:a2:cd": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"00:17:88:01:02:05:ab:31": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+		},
+		"00:17:88:01:10:49:59:f7": {
+			"00:17:88:01:01:20:8d:d4": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"00:17:88:01:01:20:8d:d2": ["switch-up2-initial_press", "switch-up2-short_rel", "switch-up2-long_rel", "switch-down2-initial_press", "switch-down2-short_rel", "switch-down2-long_rel"]
+		},
+		"00:17:88:01:10:3f:b3:6c": {
+			"00:17:88:01:01:20:8d:d4": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
+			"00:17:88:01:01:20:8d:d2": ["switch-up2-initial_press", "switch-up2-short_rel", "switch-up2-long_rel", "switch-down2-initial_press", "switch-down2-short_rel", "switch-down2-long_rel"]
+		},
+		"00:17:88:01:02:01:02:ff-02-0406": {
+			"00:17:88:01:02:77:7e:61": ["motion-sensor-detect", "motion-sensor-undetect"]
+		}
+	},
+	"rules": {
+		"switch-up2-simple": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"switch-down2-simple": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"switch-on-initial_press": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"transitiontime": 50
+					}
+				}
+			]
+		},
+		"switch-on-short_rel": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1002"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 4
+					}
+				}
+			]
+		},
+		"switch-on-long_rel": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1003"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"bri_inc": 0
+					}
+				}
+			]
+		},
+		"switch-off-initial_press": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"bri": 0,
+						"transitiontime": 50
+					}
+				}
+			]
+		},
+		"switch-off-short_rel": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4002"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"bri": 0,
+						"transitiontime": 4
+					}
+				}
+			]
+		},
+		"switch-off-long_rel": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4003"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"bri_inc": 0
+					}
+				}
+			]
+		},
+		"switch-up2-initial_press": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"transitiontime": 50
+					}
+				}
+			]
+		},
+		"switch-up2-short_rel": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2002"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 4
+					}
+				}
+			]
+		},
+		"switch-up2-long_rel": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2003"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"bri_inc": 0
+					}
+				}
+			]
+		},
+		"switch-down2-initial_press": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 0,
+						"transitiontime": 50
+					}
+				}
+			]
+		},
+		"switch-down2-short_rel": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3002"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"bri": 0,
+						"transitiontime": 4
+					}
+				}
+			]
+		},
+		"switch-down2-long_rel": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3003"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"bri_inc": 0
+					}
+				}
+			]
+		},
+		"motion-sensor-detect": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/presence",
+					"operator": "eq",
+					"value": "true"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/presence",
+					"operator": "dx"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"motion-sensor-undetect": {
+			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"recycle": true,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/presence",
+					"operator": "eq",
+					"value": "false"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/presence",
+					"operator": "ddx",
+					"value": "PT00:14:00"
+				}
+			],
+			"actions": [
+				{
+					"address": "/lights/{{LIGHT_ID}}/state",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"bri": 0,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 600
+					}
+				}
+			]
+		}
+	}
+}
