@@ -6,7 +6,6 @@
 		"00:17:88:01:10:49:5a:0b": "Bedroom - Switch - 02",
 		"00:17:88:01:10:5e:2a:bb": "Hallway - Switch - 01",
 		"00:17:88:01:10:49:58:d5": "Hallway - Switch - 02",
-		"00:17:88:01:10:5f:b4:bc": "Living room - Switch - 01",
 		"00:17:88:01:10:49:76:7a": "Living room - Switch - 02",
 		"00:17:88:01:10:49:76:dd": "Kitchen - Switch - 01",
 		"00:17:88:01:10:5e:25:e9": "Kitchen - Switch - 02",
@@ -14,7 +13,19 @@
 		"00:17:88:01:10:5f:b7:4d": "Bathroom - Switch - 01",
 		"00:17:88:01:10:49:59:f7": "Living room - Switch - 03",
 		"00:17:88:01:10:3f:b3:6c": "Living room - Switch - 04",
-		"00:17:88:01:02:01:02:ff-02-0406": "Entrance - Motion - 01"
+		"00:17:88:01:10:5f:b6:94": "Living room - Switch - 05",
+		"00:17:88:01:02:01:02:ff-02-0406": "Entrance - Motion sensor - 01",
+		"00:17:88:01:02:01:02:ff-02-0402": "Entrance - Temp sensor - 01",
+		"00:17:88:01:02:01:02:ff-02-0400": "Entrance - Light sensor - 01",
+		"00:17:88:01:02:00:b9:b5-02-0406": "Bedroom - Motion sensor - 01",
+		"00:17:88:01:02:00:b9:b5-02-0402": "Bedroom - Temp sensor - 01",
+		"00:17:88:01:02:00:b9:b5-02-0400": "Bedroom - Light sensor - 01",
+		"00:17:88:01:02:01:14:05-02-0406": "Living room - Motion sensor - 01",
+		"00:17:88:01:02:01:14:05-02-0402": "Living room - Temp sensor - 01",
+		"00:17:88:01:02:01:14:05-02-0400": "Living room - Light sensor - 01",
+		"00:17:88:01:02:00:f5:f9-02-0406": "Office - Motion sensor - 01",
+		"00:17:88:01:02:00:f5:f9-02-0402": "Office - Temp sensor - 01",
+		"00:17:88:01:02:00:f5:f9-02-0400": "Office - Light sensor - 01"
 	},
 	"lights": {
 		"00:17:88:01:02:0a:74:3b": "Office - Lamp - 01",
@@ -26,73 +37,88 @@
 		"00:17:88:01:10:28:ad:f8": "Kitchen - Lamp - 01",
 		"00:17:88:01:02:77:7e:61": "Entrance - Lamp - 01",
 		"00:17:88:01:10:28:a2:cd": "Bathroom - Lamp - 01",
-		"00:17:88:01:02:05:ab:31": "Bathroom - Lamp - 02",
-		"00:17:88:01:02:77:cb:07": "Living room - Lamp - 01",
-		"84:18:26:00:00:09:81:b7": "Living room - Chandelier",
+		"00:17:88:01:02:05:ab:31": "Portable - Lamp - 01",
 		"00:17:88:01:00:ca:27:5d": "Office - Lightstrip - 01",
 		"84:18:26:00:00:0a:94:36": "Office - UV - 01",
 		"00:17:88:01:01:20:8d:d2": "Living room - Lightstrip - Bed",
-		"00:17:88:01:01:20:8d:d4": "Living room - Lightstrip - Amb"
+		"00:17:88:01:01:20:8d:d4": "Living room - Lightstrip - Amb",
+		"84:18:26:00:00:09:ce:65": "Disco",
+		"84:18:26:00:00:0a:8f:d9": "Plug 1",
+		"84:18:26:00:00:0b:2c:5f": "Living room - Chandelier - 2"
+	},
+	"groups": {
+		"Office": ["00:17:88:01:02:0a:74:3b", "00:17:88:01:00:ca:27:5d"],
+		"Bedroom": ["00:17:88:01:02:05:b1:e4"],
+		"Hallway": ["00:17:88:01:02:07:b7:78", "00:17:88:01:10:28:a4:fb"],
+		"Living room A": ["00:17:88:01:02:77:cb:07"],
+		"Living room B": ["84:18:26:00:00:09:81:b7"],
+		"Kitchen": ["00:17:88:01:10:28:ad:f8"],
+		"Entrance": ["00:17:88:01:02:77:7e:61"],
+		"Bathroom": ["00:17:88:01:10:28:a2:cd"],
+		"Portable": ["00:17:88:01:02:05:ab:31"],
+		"Office UV": ["84:18:26:00:00:0a:94:36"],
+		"Living room - Lightstrip - Bed": ["00:17:88:01:01:20:8d:d2"],
+		"Living room - Lightstrip - Amb": ["00:17:88:01:01:20:8d:d4"],
+		"Living room - Chandelier - 2": ["84:18:26:00:00:0b:2c:5f"]
 	},
 	"links": {
 		"00:17:88:01:10:3e:22:b3": {
-			"00:17:88:01:02:0a:74:3b": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"84:18:26:00:00:0a:94:36": ["switch-up2-simple", "switch-down2-simple"]
+			"Office": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"],
+			"Office UV": ["sw-up2-simple", "sw-down2-simple"]
 		},
 		"00:17:88:01:10:49:78:35": {
-			"00:17:88:01:02:0a:74:3b": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"84:18:26:00:00:0a:94:36": ["switch-up2-simple", "switch-down2-simple"]
+			"Office": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"],
+			"Office UV": ["sw-up2-simple", "sw-down2-simple"]
 		},
 		"00:17:88:01:10:49:58:d9": {
-			"00:17:88:01:02:05:b1:e4": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+			"Bedroom": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"]
 		},
 		"00:17:88:01:10:49:5a:0b": {
-			"00:17:88:01:02:05:b1:e4": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+			"Bedroom": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"]
 		},
 		"00:17:88:01:10:5e:2a:bb": {
-			"00:17:88:01:02:07:b7:78": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"00:17:88:01:10:28:a4:fb": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+			"Hallway": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"]
 		},
 		"00:17:88:01:10:49:58:d5": {
-			"00:17:88:01:02:07:b7:78": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"00:17:88:01:10:28:a4:fb": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
-		},
-		"00:17:88:01:10:5f:b4:bc": {
-			"00:17:88:01:02:77:cb:07": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"84:18:26:00:00:09:81:b7": ["switch-up2-simple", "switch-down2-simple"]
+			"Hallway": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"]
 		},
 		"00:17:88:01:10:49:76:7a": {
-			"00:17:88:01:02:77:cb:07": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"84:18:26:00:00:09:81:b7": ["switch-up2-simple", "switch-down2-simple"]
+			"Living room A": ["sw-on-init_press-warm", "sw-on-short_relwarm", "sw-on-long_relwarm", "sw-off-init_presswarm", "sw-off-short_relwarm", "sw-off-long_rel-warm"],
+			"Living room B": ["sw-up2-simple", "sw-down2-simple"]
+		},
+		"00:17:88:01:10:5f:b6:94": {
+			"Living room A": ["sw-on-tgl-on-warm", "sw-on-tgl-off-warm"],
+			"Living room B": ["sw-up-tgl-on-simple", "sw-up-tgl-off-simple"],
+			"Living room - Lightstrip - Amb": ["sw-down-tgl-on", "sw-down-tgl-off"],
+			"Living room - Chandelier - 2": ["sw-off-tgl-on-simple", "sw-off-tgl-off-simple"]
 		},
 		"00:17:88:01:10:49:76:dd": {
-			"00:17:88:01:10:28:ad:f8": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+			"Kitchen": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"]
 		},
 		"00:17:88:01:10:5e:25:e9": {
-			"00:17:88:01:10:28:ad:f8": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+			"Kitchen": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"]
 		},
 		"00:17:88:01:10:5f:b3:6e": {
-			"00:17:88:01:02:77:7e:61": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+			"Entrance": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"]
 		},
 		"00:17:88:01:10:5f:b7:4d": {
-			"00:17:88:01:10:28:a2:cd": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"00:17:88:01:02:05:ab:31": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"]
+			"Bathroom": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"]
 		},
 		"00:17:88:01:10:49:59:f7": {
-			"00:17:88:01:01:20:8d:d4": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"00:17:88:01:01:20:8d:d2": ["switch-up2-initial_press", "switch-up2-short_rel", "switch-up2-long_rel", "switch-down2-initial_press", "switch-down2-short_rel", "switch-down2-long_rel"]
+			"Living room - Lightstrip - Amb": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"],
+			"Living room - Lightstrip - Bed": ["sw-up2-init_press", "sw-up2-short_rel", "sw-up2-long_rel", "sw-down2-init_press", "sw-down2-short_rel", "sw-down2-long_rel"]
 		},
 		"00:17:88:01:10:3f:b3:6c": {
-			"00:17:88:01:01:20:8d:d4": ["switch-on-initial_press", "switch-on-short_rel", "switch-on-long_rel", "switch-off-initial_press", "switch-off-short_rel", "switch-off-long_rel"],
-			"00:17:88:01:01:20:8d:d2": ["switch-up2-initial_press", "switch-up2-short_rel", "switch-up2-long_rel", "switch-down2-initial_press", "switch-down2-short_rel", "switch-down2-long_rel"]
+			"Living room - Lightstrip - Amb": ["sw-on-init_press", "sw-on-short_rel", "sw-on-long_rel", "sw-off-init_press", "sw-off-short_rel", "sw-off-long_rel"],
+			"Living room - Lightstrip - Bed": ["sw-up2-init_press", "sw-up2-short_rel", "sw-up2-long_rel", "sw-down2-init_press", "sw-down2-short_rel", "sw-down2-long_rel"]
 		},
 		"00:17:88:01:02:01:02:ff-02-0406": {
-			"00:17:88:01:02:77:7e:61": ["motion-sensor-detect", "motion-sensor-undetect"]
+			"Entrance": ["motion-sensor-detect", "motion-sensor-undetect"]
 		}
 	},
 	"rules": {
-		"switch-up2-simple": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-on-tgl-on-warm": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -103,22 +129,30 @@
 				{
 					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
 					"operator": "eq",
-					"value": "2000"
+					"value": "1000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
 				}
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": true,
-						"transitiontime": 0
+						"bri": 254,
+						"xy": [0.55,0.4],
+						"sat": 63,
+						"transitiontime": 5
 					}
 				}
 			]
 		},
-		"switch-down2-simple": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-on-tgl-off-warm": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -129,22 +163,27 @@
 				{
 					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
 					"operator": "eq",
-					"value": "3000"
+					"value": "1000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
 				}
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": false,
-						"transitiontime": 0
+						"transitiontime": 5
 					}
 				}
 			]
 		},
-		"switch-on-initial_press": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-on-init_press-warm": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -160,7 +199,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": true,
@@ -170,8 +209,8 @@
 				}
 			]
 		},
-		"switch-on-short_rel": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-on-short_rel-warm": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -187,20 +226,20 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": true,
 						"bri": 254,
-						"xy": [0.4,0.4],
+						"xy": [0.55,0.4],
 						"sat": 63,
 						"transitiontime": 4
 					}
 				}
 			]
 		},
-		"switch-on-long_rel": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-on-long_rel-warm": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -216,7 +255,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"bri_inc": 0
@@ -224,8 +263,8 @@
 				}
 			]
 		},
-		"switch-off-initial_press": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-off-init_press-warm": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -241,7 +280,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"bri": 0,
@@ -250,8 +289,8 @@
 				}
 			]
 		},
-		"switch-off-short_rel": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-off-short_rel-warm": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -267,7 +306,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": false,
@@ -277,8 +316,8 @@
 				}
 			]
 		},
-		"switch-off-long_rel": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-off-long_rel-warm": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -294,7 +333,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"bri_inc": 0
@@ -302,8 +341,516 @@
 				}
 			]
 		},
-		"switch-up2-initial_press": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-on-tgl-on": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 5
+					}
+				}
+			]
+		},
+		"sw-on-tgl-off": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 5
+					}
+				}
+			]
+		},
+		"sw-up-tgl-on": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 5
+					}
+				}
+			]
+		},
+		"sw-up-tgl-off": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 5
+					}
+				}
+			]
+		},
+		"sw-down-tgl-on": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 5
+					}
+				}
+			]
+		},
+		"sw-down-tgl-off": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 5
+					}
+				}
+			]
+		},
+		"sw-off-tgl-on": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 5
+					}
+				}
+			]
+		},
+		"sw-off-tgl-off": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 5
+					}
+				}
+			]
+		},
+		"sw-on-tgl-on-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-on-tgl-off-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-up-tgl-on-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-up-tgl-off-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-down-tgl-on-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-down-tgl-off-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-off-tgl-on-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "false"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-off-tgl-off-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4000"
+				},
+				{
+					"address": "/groups/{{GROUP_ID}}/state/any_on",
+					"operator": "eq",
+					"value": "true"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-up2-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -319,72 +866,17 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": true,
-						"bri": 254,
-						"transitiontime": 50
+						"transitiontime": 0
 					}
 				}
 			]
 		},
-		"switch-up2-short_rel": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
-			"recycle": false,
-			"status": "enabled",
-			"conditions": [
-				{
-					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
-					"operator": "dx"
-				},
-				{
-					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
-					"operator": "eq",
-					"value": "2002"
-				}
-			],
-			"actions": [
-				{
-					"address": "/lights/{{LIGHT_ID}}/state",
-					"method": "PUT",
-					"body": {
-						"on": true,
-						"bri": 254,
-						"xy": [0.4,0.4],
-						"sat": 63,
-						"transitiontime": 4
-					}
-				}
-			]
-		},
-		"switch-up2-long_rel": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
-			"recycle": false,
-			"status": "enabled",
-			"conditions": [
-				{
-					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
-					"operator": "dx"
-				},
-				{
-					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
-					"operator": "eq",
-					"value": "2003"
-				}
-			],
-			"actions": [
-				{
-					"address": "/lights/{{LIGHT_ID}}/state",
-					"method": "PUT",
-					"body": {
-						"bri_inc": 0
-					}
-				}
-			]
-		},
-		"switch-down2-initial_press": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-down2-simple": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -400,7 +892,273 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"transitiontime": 0
+					}
+				}
+			]
+		},
+		"sw-on-init_press": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"transitiontime": 50
+					}
+				}
+			]
+		},
+		"sw-on-short_rel": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1002"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 4
+					}
+				}
+			]
+		},
+		"sw-on-long_rel": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "1003"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"bri_inc": 0
+					}
+				}
+			]
+		},
+		"sw-off-init_press": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"bri": 0,
+						"transitiontime": 50
+					}
+				}
+			]
+		},
+		"sw-off-short_rel": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4002"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": false,
+						"bri": 0,
+						"transitiontime": 4
+					}
+				}
+			]
+		},
+		"sw-off-long_rel": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "4003"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"bri_inc": 0
+					}
+				}
+			]
+		},
+		"sw-up2-init_press": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"transitiontime": 50
+					}
+				}
+			]
+		},
+		"sw-up2-short_rel": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2002"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"on": true,
+						"bri": 254,
+						"xy": [0.4,0.4],
+						"sat": 63,
+						"transitiontime": 4
+					}
+				}
+			]
+		},
+		"sw-up2-long_rel": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "2003"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
+					"method": "PUT",
+					"body": {
+						"bri_inc": 0
+					}
+				}
+			]
+		},
+		"sw-down2-init_press": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
+			"recycle": false,
+			"status": "enabled",
+			"conditions": [
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/lastupdated",
+					"operator": "dx"
+				},
+				{
+					"address": "/sensors/{{SENSOR_ID}}/state/buttonevent",
+					"operator": "eq",
+					"value": "3000"
+				}
+			],
+			"actions": [
+				{
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": true,
@@ -410,8 +1168,8 @@
 				}
 			]
 		},
-		"switch-down2-short_rel": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-down2-short_rel": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -427,7 +1185,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": false,
@@ -437,8 +1195,8 @@
 				}
 			]
 		},
-		"switch-down2-long_rel": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+		"sw-down2-long_rel": {
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -454,7 +1212,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"bri_inc": 0
@@ -463,7 +1221,7 @@
 			]
 		},
 		"motion-sensor-detect": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": false,
 			"status": "enabled",
 			"conditions": [
@@ -479,7 +1237,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": true,
@@ -492,7 +1250,7 @@
 			]
 		},
 		"motion-sensor-undetect": {
-			"name": "{{SENSOR_ID}}->{{LIGHT_ID}}={{RULE_ID}}",
+			"name": "{{SENSOR_ID}}->{{GROUP_ID}}={{RULE_ID}}",
 			"recycle": true,
 			"status": "enabled",
 			"conditions": [
@@ -509,7 +1267,7 @@
 			],
 			"actions": [
 				{
-					"address": "/lights/{{LIGHT_ID}}/state",
+					"address": "/groups/{{GROUP_ID}}/action",
 					"method": "PUT",
 					"body": {
 						"on": false,
